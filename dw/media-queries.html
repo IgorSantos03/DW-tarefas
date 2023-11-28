@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container {
+            background-color: aquamarine;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3#md {
+            display: none;
+        }
+
+        h3#lg {
+            display: none;
+        }
+
+        h3#xl {
+            display: none;
+        }
+
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+            .container {
+                background-color: aqua;
+            }
+
+            h3#sm {
+                display: none;
+            }
+            h3#md {
+                display: block;
+            }
+            h3#lg {
+                display: none;
+            }
+            h3#xl {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+            .container {
+                background-color: rgb(31, 32, 32);
+            }
+
+            h3#sm {
+                display: none;
+            }
+            h3#md {
+                display: none;
+            }
+            h3#lg {
+                display: block;
+            }
+            h3#xl {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1280px) and (max-width: 1535px) {
+
+            .container {
+                background-color: rgb(13, 85, 85);
+            }
+
+            h3#sm {
+                display: none;
+            }
+            h3#md {
+                display: none;
+            }
+            h3#lg {
+                display: none;
+            }
+            h3#xl {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Media Queries</h1>
+
+        <h3 id="sm">Small</h3>
+        <h3 id="md">Medium </h3>
+        <h3 id="lg">Large</h3>
+        <h3 id="xl">Extra Large</h3>
+
+    </div>
+
+</body>
+
+</html>

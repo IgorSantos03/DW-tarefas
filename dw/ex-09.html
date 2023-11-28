@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-09</title>
+</head>
+
+<body>
+    <h1>Calculadora de Preço</h1>
+    <hr>
+    <p><strong>tamnho em m² | valor em R$</strong></p>
+    <form>
+        <div>
+            <p>Largura do terreno:</p>
+            <input type="number" id="largura" />
+        </div>
+        <br />
+        <div>
+            <p>Comprimento do terreno:</p>
+        <input type="number" id="comprimento" />
+        </div>
+        <br />
+        <div>
+            <p>Valor do metro quadrado:</p>
+            <input type="number" id="valorMetro" step="0.10" />
+        </div>       
+        <hr>
+
+        <button type="button" onclick="calcular()">calcular</button>
+        <hr>
+
+        <p><strong>Área:</strong> <span id="Area"></span> m²</p>
+        <p><strong>Preço de venda:</strong> R$ <span id="ResultadoVenda"></span></p>
+
+    </form>
+
+    <script>
+        function calcular() {
+            const largura = parseFloat(document.getElementById("largura").value);
+            const comprimento = parseFloat(document.getElementById("comprimento").value);
+            const valorMetroQuadrado = parseFloat(document.getElementById("valorMetro").value);
+
+            const area = largura * comprimento;
+            const preco = area * valorMetroQuadrado;
+
+            document.getElementById("Area").textContent = area;
+            document.getElementById("ResultadoVenda").textContent = preco;
+        }
+    </script>
+
+</body>
+
+</html>
